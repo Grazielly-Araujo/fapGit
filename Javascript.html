@@ -3,15 +3,19 @@
 <head>
 <title>Tutorial de Alert em JavaScript - Linha de Código</title>
 <script>
-function GetValue()
-{
 
-main
+function InserirNotas()
+{
+    let valor1 = parseInt(prompt("Informe primeira nota: "))
+    let valor2 = parseInt(prompt("Informe segunda nota: "))
+    let valor3 = parseInt(prompt("Informe terceira nota: "))
+    let valor4 = parseInt(prompt("Informe quarta nota: "))
+
+    alert("NOTAS INSERIDAS!!")
 }
 
 function InserirPesos()
 {
-botao-2
     let Peso1 = parseInt(prompt("Informe Peso 1: "))
     let Peso2 = parseInt(prompt("Informe Peso 2: "))
     let Peso3 = parseInt(prompt("Informe Peso 3: "))
@@ -19,18 +23,13 @@ botao-2
 
     alert("Pesos Inseridos!")
   
-    let valor1 = parseInt(prompt("Informe primeira nota: "))
-    let valor2 = parseInt(prompt("Informe segunda nota: "))
-    let valor3 = parseInt(prompt("Informe terceira nota: "))
-    let valor4 = parseInt(prompt("Informe quarta nota: "))
-
-    alert("NOTAS INSERIDAS!!")
- main
 }
+
+
 </script>
 </head>
 <body>
-
+<input type="button" onclick="InserirNotas()" value="Exibir Alert" />
 <input type="button" onclick="InserirPesos()" value="Exibir Alert" />
 
 </body>
