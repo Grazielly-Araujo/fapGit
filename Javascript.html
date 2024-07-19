@@ -43,10 +43,13 @@ function InserirPesos()
     let somaPesos = 0;
     for (let i = 0; i < 4; i++) {
         somaNotas = somaNotas + notas[i] * pesos[i]; // a variavel somaNotas vai receber o valor dela + o valor do primeira posição do array de notas, vai multiplicar pelo valor da primeria posição do array de pesos e para cada volta do for, será incrementado o valor da variavel i, com isso mudando a posição dos valores dos arrays.
-        somaPesos += pesos[i];
+        somaPesos = somaPesos + pesos[i];
     }
     let mediaPonderada = somaNotas / somaPesos;
+    
     alert(`A média ponderada é: ${mediaPonderada.toFixed(2)}`);
+    
+    
 }
 
 
