@@ -3,20 +3,59 @@
 <head>
 <title>Tutorial de Alert em JavaScript - Linha de Código</title>
 <script>
-function GetUserData()
-{
-    
+
+let notas = []; // array onde serão armazenados os valores das notas inseridos pelo suário
+let pesos = []; // array onde serão armazenados os valores dos pesos inseridos pelo suário
+
+// função recebe as notas inseridas pelo usuário
+function InserirNotas()
+{ 
+    let nota1 = parseInt(prompt("Informe primeira nota: "));
+    notas.push(nota1); // aramazena o valo da nota na posição 0 no array notas
+    let nota2 = parseInt(prompt("Informe segunda nota: "));
+    notas.push(nota2); // aramazena o valo da nota na posição 1 no array notas
+    let nota3 = parseInt(prompt("Informe terceira nota: "));
+    notas.push(nota3); // aramazena o valo da nota na posição 2 no array notas
+    let nota4 = parseInt(prompt("Informe quarta nota: "));
+    notas.push(nota4); // aramazena o valo da nota na posição 3 no array notas
+
+    alert("NOTAS INSERIDAS!!")
 }
-function funcao1()
+
+function InserirPesos()
 {
-alert("Eu sou um alerta de tela!");
-console.log("eu sou um alerta de console!")
+    let peso1 = parseInt(prompt("Informe Peso 1: "))
+    pesos.push(peso1); // aramazena o valo da nota na posição 0 no array pesos
+    let peso2 = parseInt(prompt("Informe Peso 2: "))
+    pesos.push(peso2); // aramazena o valo da nota na posição 1 no array pesos
+    let peso3 = parseInt(prompt("Informe Peso 3: "))
+    pesos.push(peso3); // aramazena o valo da nota na posição 2 no array pesos
+    let peso4 = parseInt(prompt("Informe Peso 4: "))
+    pesos.push(peso4); // aramazena o valo da nota na posição 3 no array pesos
+
+    alert("Pesos Inseridos!")
+  
 }
+
+ function calcularMedia() {
+    let somaNotas = 0;
+    let somaPesos = 0;
+    for (let i = 0; i < 4; i++) {
+        somaNotas = somaNotas + notas[i] * pesos[i]; // a variavel somaNotas vai receber o valor dela + o valor do primeira posição do array de notas, vai multiplicar pelo valor da primeria posição do array de pesos e para cada volta do for, será incrementado o valor da variavel i, com isso mudando a posição dos valores dos arrays.
+        somaPesos += pesos[i];
+    }
+    let mediaPonderada = somaNotas / somaPesos;
+    alert(`A média ponderada é: ${mediaPonderada.toFixed(2)}`);
+}
+
+
 </script>
 </head>
 <body>
+<input type="button" onclick="InserirNotas()" value="Inserir nota" />
+<input type="button" onclick="InserirPesos()" value="Inserir Peso" />
 
-<input type="button" onclick="funcao1()" value="Exibir Alert" />
+<button onclick="calcularMedia()">Calcular Media</button>  
 
 </body>
-</html></div>
+</html>
